@@ -1,0 +1,20 @@
+Width: 375px
+transform: scale(0.330851); transform-origin: 0px 0px;
+
+width: 414px
+transform: scale(0.37234); transform-origin: 0px 0px;
+
+width: 390px
+transform: scale(0.346809); transform-origin: 0px 0px;
+
+width: 430px
+transform: scale(0.389362); transform-origin: 0px 0px;
+
+width: 412px
+transform: scale(0.370213); transform-origin: 0px 0px;
+
+width: 360px
+transform: scale(0.314894); transform-origin: 0px 0px;
+
+width: 412px
+transform: scale(0.370213); transform-origin: 0px 0px;
