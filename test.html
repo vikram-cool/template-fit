@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale A4 HTML Div</title>
+    <style>
+        #a4Div {
+            width: 210mm;
+            /* A4 width */
+            height: 297mm;
+            /* A4 height */
+            background-color: white;
+            border: 1px solid black;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin: auto;
+            padding: 20px;
+            /* Padding to ensure content doesn't touch the borders */
+            font-family: Arial, sans-serif;
+            /* Set a default font */
+        }
+
+        .dummy-content {
+            margin-bottom: 20px;
+            /* Add some margin between dummy content */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a4Div">
+        <!-- Dummy Content -->
+        <div class="dummy-content">
+            <h1>Lorem Ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec nisi nec nisi maximus placerat.
+                Phasellus ultricies nunc sit amet odio consectetur, ac hendrerit purus feugiat.
+            </p>
+        </div>
+
+        <div class="dummy-content">
+            <h2>Nulla Posuere</h2>
+            <p>
+                Nulla posuere, justo nec molestie fermentum, ex tellus convallis justo, nec efficitur lorem lectus
+                nec enim. Sed mattis erat vitae dui tristique, a lacinia risus efficitur.
+            </p>
+        </div>
+
+        <!-- Add more dummy content as needed -->
+    </div>
+
+    <script>
+        function scaleA4Div() {
+            var a4Div = document.getElementById('a4Div');
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+
+            var scaleX = screenWidth / a4Div.offsetWidth;
+            var scaleY = screenHeight / a4Div.offsetHeight;
+
+            var scale = Math.min(scaleX, scaleY);
+
+            // Ensure scale is between 0 and 1
+            scale = Math.max(0, Math.min(1, scale));
+
+            a4Div.style.transform = 'scale(' + scale + ')';
+        }
+
+        // Call the function when the page loads and when it resizes
+        window.onload = scaleA4Div;
+        window.onresize = scaleA4Div;
+    </script>
+</body>
+
+</html>

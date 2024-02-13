@@ -1,34 +1,42 @@
-$(document).on("shown.bs.modal", function () {
-  var screenWidth = $(window).width();
+var pageWidth, pageHeight;
 
-  // Calculate scale
-  var scale;
-  if ((screenWidth == 430)) {
-    scale = 0.389362;
-  } else if (screenWidth == 414) {
-    scale = 0.37234;
-  } else if (screenWidth == 412) {
-    scale = 0.370213;
-  } else if (screenWidth == 390) {
-    scale = 0.346809;
-  } else if (screenWidth == 375) {
-    scale = 0.330851;
-  } else if (screenWidth == 360) {
-    scale = 0.314894;
-  } else {
-    scale = 1;
+var basePage = {
+  width: 763,
+  height: 600,
+  scale: 1,
+  scaleX: 1,
+  scaleY: 1,
+};
+
+$(function () {
+  var $page = $(".page_content");
+
+  getPageSize();
+  scalePages($page, pageWidth, pageHeight);
+
+  //using underscore to delay resize method till finished resizing window
+  $(window).resize(
+    _.debounce(function () {
+      getPageSize();
+      scalePages($page, pageWidth, pageHeight);
+    }, 150)
+  );
+
+  function getPageSize() {
+    pageHeight = $("#container").height();
+    pageWidth = $("#container").width();
   }
 
-  // Build transform string
-  //   var transform = "scale(" + scale + ") transform-origin: 0px 0px;";
-  var transform = "scale(" + scale + ")";
-
-  // Set transform on #resumeContainer
-
-  // When modal is shown
-  $("#resumeContainer").css("transform", transform);
-  $("#resumeContainer").css("transform-origin", "0px 0px");
-
-  console.log(`Screen width: ${screenWidth}`);
-  console.log(`transform: scale(${transform})`);
+  function scalePages(page, maxWidth, maxHeight) {
+    var scaleX = 1,
+      scaleY = 1;
+    scaleX = maxWidth / basePage.width;
+    scaleY = maxHeight / basePage.height;
+    basePage.scaleX = scaleX;
+    basePage.scaleY = scaleY;
+    basePage.scale = scaleX > scaleY ? scaleY : scaleX;
+    // basePage.scale = scaleY;
+    var scaleValue = basePage.scale - 0.01;
+    page.attr("style", "-webkit-transform:scale(" + scaleValue + ");");
+  }
 });
