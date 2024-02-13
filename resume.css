@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  --clr-black: #000000;
+  --clr-resume-theme: #098ea0;
+  --clr-gray: #787878;
+  --clr-white: #ffffff;
+  --resume-width: 763px;
+  --left-width: 494px;
+  --star-size: 10px;
+  --star-color: #e5dede;
+  --star-background: #098ea0;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+#modern-teal {
+  font-family: "Barlow", sans-serif;
+  position: relative;
+  width: 763px;
+  font-size: 12px;
+  padding: 10px;
+  color: #000000;
+  background-color: #fff;
+}
+#modern-teal ul {
+  padding-left: 0;
+}
+#modern-teal h3 {
+  text-align: left;
+  margin-bottom: 2px;
+}
+#modern-teal .projects ul {
+  margin-bottom: 10px;
+}
+#modern-teal .project-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+#modern-teal .certi .year,
+#modern-teal .certi .name {
+  display: block;
+}
+#modern-teal .certi .name {
+  font-weight: 500;
+}
+#modern-teal .certi p {
+  display: inline;
+}
+#modern-teal .certi a {
+  color: #000000;
+}
+#modern-teal .summary-column {
+  float: right;
+  width: 200px;
+  padding-left: 16px;
+  margin-left: 16px;
+  background-color: #fff;
+}
+#modern-teal .summary-column .education span {
+  display: block;
+}
+#modern-teal .summary-column .education span.institute-name {
+  font-weight: 700;
+}
+#modern-teal .summary-column .languages,
+#modern-teal .summary-column .hobbies {
+  font-weight: 700;
+}
+#modern-teal .detail-column .section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+#modern-teal .detail-column .personal-info .detail {
+  max-width: calc(100% - 210px);
+}
+#modern-teal .detail-column .personal-info .detail .address {
+  font-weight: normal;
+}
+#modern-teal .summary-column {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#modern-teal .summary-column {
+  border-left: 1px solid var(--clr-gray);
+}
+#modern-teal .summary-column section {
+  margin-bottom: 15px;
+}
+#modern-teal .summary-column section .section-title {
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--clr-gray);
+}
+#modern-teal .summary-column section h2 {
+  margin-bottom: 10px;
+}
+#modern-teal .personal-info {
+  display: flex;
+  justify-content: space-between;
+}
+#modern-teal .personal-info .line-below-position {
+  width: 55px;
+  height: 0px;
+  border: 1px solid var(--clr-gray);
+  margin: 14px 0;
+}
+#modern-teal .personal-info .name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+#modern-teal .personal-info .position {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+#modern-teal .personal-info .contact-url {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+}
+#modern-teal .personal-info .contact-url a {
+  text-decoration: none;
+  color: var(--clr-black);
+  font-weight: 700;
+}
+#modern-teal .personal-info .address {
+  font-size: 12px;
+  margin: 0;
+}
+#modern-teal .personal-info .address strong {
+  font-weight: 700;
+}
+#modern-teal .detail-column section {
+  margin-top: 14px;
+}
+#modern-teal .detail-column .career-objective {
+  margin-bottom: 14px;
+  margin-top: 10 !important;
+}
+#modern-teal .detail-column .career-objective p {
+  margin: 0;
+}
+#modern-teal ul li:not(:last-child) {
+  margin-bottom: 7px;
+}
+#modern-teal .shifted-inside-list {
+  margin-left: 14px;
+}
+#modern-teal .list-style-none {
+  list-style: none;
+}
+#modern-teal section hr {
+  margin: 7px 0 14px 0;
+  width: 528px;
+  opacity: 1;
+}
+#modern-teal .candidate-pic {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: #e5dede;
+  border: 1px solid var(--clr-resume-theme);
+}
+#modern-teal .social-links {
+  margin-top: 14px;
+}
+#modern-teal .social-links ul {
+  list-style: none;
+}
+#modern-teal .social-links ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+#modern-teal .social-links ul li .icon {
+  margin-right: 5px;
+}
+#modern-teal .social-links ul li a {
+  font-style: italic;
+  color: var(--clr-black);
+}
+#modern-teal .career-timeline .timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: 10px;
+}
+#modern-teal .career-timeline .timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  border-left: 2px dashed var(--clr-gray);
+  top: 0;
+  bottom: 0;
+}
+#modern-teal .career-timeline .career-item {
+  position: relative;
+  background: inherit;
+  width: 50%;
+  margin-bottom: 10px;
+}
+#modern-teal .career-timeline .career-item .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--clr-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+#modern-teal .career-timeline .career-item .career-timeline-number {
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  top: calc(50% - 20px);
+  color: var(--clr-white);
+  background: var(--clr-resume-theme);
+  border: 1px solid var(--clr-black);
+  border-radius: 40px;
+  text-align: center;
+  font-weight: 700;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -12px;
+}
+#modern-teal .career-timeline .career-item .organisation-info {
+  position: relative;
+  margin-left: 20px;
+}
+#modern-teal .career-timeline .career-item .organisation-info p,
+#modern-teal .career-timeline .career-item .organisation-info h2 {
+  margin: 0;
+}
+#modern-teal .career-timeline .career-item .organisation-info .position {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--clr-black);
+  margin: 0;
+}
+#modern-teal .career-timeline .career-item .organisation-info p {
+  margin: 0;
+}
+#modern-teal .career-timeline .career-item.left {
+  left: 0;
+}
+#modern-teal .career-timeline .career-item.left .date {
+  right: -75px;
+}
+#modern-teal .career-timeline .career-item.left .career-timeline-number {
+  left: -14px;
+}
+#modern-teal .career-timeline .career-item.right::after {
+  left: -8px;
+}
+#modern-teal .career-timeline .career-item.right::before {
+  left: 8px;
+}
+#modern-teal .career-timeline .career-item.right .date {
+  left: -75px;
+}
+#modern-teal .skill-with-rating {
+  display: flex;
+  justify-content: space-between;
+}
+#modern-teal .skill-with-rating .name {
+  display: inline-block;
+}
+#modern-teal .skill-with-rating .stars {
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+#modern-teal .container {
+  max-width: 650px;
+  margin: 50px auto;
+}
+#modern-teal .work-exp .organisation-info ~ p {
+  margin: 0;
+}
+#modern-teal .work-exp .organisation-info {
+  color: var(--clr-resume-theme);
+  margin: 20px 0 10px 0;
+}
+#modern-teal .work-exp .organisation-info h2,
+#modern-teal .work-exp .organisation-info p {
+  margin: 0;
+}
+#modern-teal .work-exp .organisation-info .position {
+  font-size: 18px;
+  font-weight: 700;
+}
+#modern-teal .work-exp .organisation-info h2 {
+  font-size: 18px;
+}
+#modern-teal .work-exp .item .subheading {
+  margin: 10px 0 0px 0;
+}
+#modern-teal .work-exp .subheading {
+  margin: 10px 0 3px 0;
+  font-size: 14px;
+}
+#modern-teal .work-exp .timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+#modern-teal .work-exp .timeline:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  border-left: 2px dashed var(--clr-gray);
+}
+#modern-teal .work-exp .timeline .timeline-container {
+  position: relative;
+}
+#modern-teal .work-exp .timeline .timeline-container .timeline-icon {
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 10px;
+  height: 50px;
+  text-align: center;
+  font-size: 2rem;
+  background: var(--clr-resume-theme);
+}
+#modern-teal .work-exp .timeline .timeline-container .timeline-icon i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#modern-teal
+  .work-exp
+  .timeline
+  .timeline-container
+  .timeline-body
+  .timeline-title {
+  margin-bottom: 1.4rem;
+}
+#modern-teal
+  .work-exp
+  .timeline
+  .timeline-container
+  .timeline-body
+  .timeline-subtitle {
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.4;
+  margin-top: 16px;
+  font-size: 11px;
+}
+#modern-teal #vikram p {
+  margin-bottom: 0;
+}
+
+@media print {
+  .resume-page {
+    -webkit-print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
+    -ms-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  @page {
+    size: auto;
+  }
+} /*# sourceMappingURL=style.css.map */

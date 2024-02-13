@@ -1,0 +1,28 @@
+/* Page width 375px */
+@media (width: 375px) {
+  .resume-container {
+    transform: scale(0.330851);
+    transform-origin: 0px 0px;
+  }
+}
+/* Page width 414px */
+@media (width: 414px) {
+  .resume-container {
+    transform: scale(0.37234);
+    transform-origin: 0px 0px;
+  }
+}
+/* Page width 390px */
+@media (width: 390px) {
+  .resume-container {
+    transform: scale(0.346809);
+    transform-origin: 0px 0px;
+  }
+}
+/* Page width 430px */
+@media (width: 430px) {
+  .resume-container {
+    transform: scale(0.389362);
+    transform-origin: 0px 0px;
+  }
+}/*# sourceMappingURL=style.css.map */
